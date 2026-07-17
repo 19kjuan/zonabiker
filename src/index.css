@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-biker-gradient {
+    @apply bg-gradient-to-r from-biker-orange via-biker-accent to-biker-yellow bg-clip-text text-transparent;
+  }
+  
+  .bg-biker-gradient {
+    @apply bg-gradient-to-r from-biker-orange via-biker-accent to-biker-yellow;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-500 hover:scale-105;
+  }
+  
+  .glass-effect {
+    @apply bg-biker-dark/80 backdrop-blur-xl border border-biker-gray/50;
+  }
+  
+  .premium-border {
+    @apply border border-biker-orange/30 hover:border-biker-orange/60 transition-colors duration-300;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 107, 53, 0.5);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+}
